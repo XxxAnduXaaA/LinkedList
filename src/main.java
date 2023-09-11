@@ -7,7 +7,8 @@ public class main {
         list.append("а");
         list.append("а");
 
-        list.printList();
+        System.out.println(list.head);
+        System.out.println(list.tail);
 
     }
 }

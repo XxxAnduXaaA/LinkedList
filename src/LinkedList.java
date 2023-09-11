@@ -4,9 +4,11 @@ public class LinkedList<T> {
     // обращение к головному элементу и хвостовому
 
     public Node head;
+    public Node tail;
 
     public LinkedList() {
         this.head = null;
+        this.tail = null;
     }
 
     public void append(T data) {
@@ -14,13 +16,17 @@ public class LinkedList<T> {
 
         if (head == null) {
             head = newNode;
+            tail = newNode;
+
         } else {
             Node current = head;
-            while(current.next != null){
+            while (current.next != null) {
                 current = current.next;
             }
 
             current.next = newNode;
+            tail = newNode;
+
 
         }
     }
